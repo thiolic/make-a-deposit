@@ -1,0 +1,11 @@
+.header-button {
+    background-color: transparent;
+    color: inherit;
+    transition: color 250ms ease-in-out;
+    border-radius: var(--button-border-radius);
+
+    &:hover,
+    &:focus {
+        color: var(--orange-color);
+    }
+}

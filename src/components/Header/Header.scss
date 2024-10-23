@@ -1,0 +1,106 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+
+    position: relative;
+    z-index: 1001;
+    height: 4rem;
+
+    @media (min-width: 768px) {
+        height: 5.25rem;
+    }
+
+    &__wrapper {
+        background-color: var(--background-color);
+        box-shadow: 0px 2px 7px 0px #0000005e;
+        height: 4rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+
+        @media (min-width: 768px) {
+            height: 5.25rem;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 0.625rem;
+        padding-inline: 1.25rem;
+        max-width: 90rem;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            padding-inline: 3rem;
+            padding-block: 1rem;
+            min-height: 5.25rem;
+        }
+
+        @media (min-width: 1024px) {
+            padding-inline: 7.5rem;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        column-gap: 1.125rem;
+
+        @media (min-width: 768px) {
+            column-gap: 1.5rem;
+        }
+    }
+
+    &__logo {
+        svg {
+            width: 1.625rem;
+
+            @media (min-width: 768px) {
+                width: auto;
+            }
+        }
+    }
+
+    &__components {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1.5rem;
+    }
+
+    &__buttons {
+        align-items: center;
+        column-gap: 1.5rem;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__balance {
+        flex-shrink: 0;
+    }
+
+    &__profile {
+        height: 3.25rem;
+        width: 3.25rem;
+        display: none;
+        border-radius: 100%;
+        border: 2px solid var(--violet-color);
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 100%;
+        }
+    }
+}

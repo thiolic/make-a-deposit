@@ -1,0 +1,23 @@
+%container-base {
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+
+    @media (min-width: 768px) {
+        padding-inline: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+        padding-inline: 7.5rem;
+    }
+}
+
+%container {
+    @extend %container-base;
+
+    max-width: 90rem;
+}
+
+.container {
+    @extend %container;
+}

@@ -1,0 +1,121 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+
+    @media (min-width: 768px) {
+        padding-block: 7rem;
+    }
+
+    &__content {
+        background-color: var(--background-color);
+        padding: 1.75rem 1.25rem;
+        border-radius: 0.5625rem;
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.37);
+        max-width: 44.375rem;
+        max-height: 100%;
+        height: calc(100vh - 4rem);
+        width: 100%;
+        overflow-y: auto;
+
+        @media (min-width: 768px) {
+            height: auto;
+            padding: 2rem;
+        }
+
+        &::-webkit-scrollbar {
+            height: 2px;
+            width: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--blue-color);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--grey-color);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__nav-back {
+        display: flex;
+        align-items: center;
+        column-gap: 0.3125rem;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.375;
+        cursor: pointer;
+
+        &__icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__nav-close {
+        background-color: transparent;
+        color: inherit;
+        transition: color 250ms ease-in-out;
+        border-radius: var(--button-border-radius);
+
+        &:hover,
+        &:focus {
+            color: var(--orange-color);
+        }
+    }
+
+    &__balance {
+        background-color: var(--blue-color);
+        width: 100%;
+        margin: 1.3rem 0;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 800;
+        line-height: calc(19 / 14);
+        text-align: center;
+        border-radius: 0.375rem;
+
+        @media (min-width: 768px) {
+            font-size: 1rem;
+            line-height: 1.375;
+            border-radius: 0;
+            width: calc(100% + 4rem);
+            margin: 1.3rem -2rem;
+        }
+
+        span {
+            vertical-align: middle;
+            font-size: 1.125rem;
+            font-weight: 900;
+            line-height: calc(24 / 18);
+
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+                line-height: calc(32 / 24);
+            }
+        }
+    }
+
+    &__button {
+        .button {
+            width: 100%;
+        }
+    }
+}

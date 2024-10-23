@@ -1,0 +1,79 @@
+.transaction-item {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    flex-shrink: 0;
+    width: 10rem;
+
+    @media (min-width: 768px) {
+        width: 19%;
+    }
+
+    &:first-child {
+        width: 15rem;
+
+        @media (min-width: 768px) {
+            width: 24%;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: var(--grey-color);
+        border-radius: 0.625rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.1875rem;
+
+        img {
+            display: block;
+            height: auto;
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.25rem;
+    }
+
+    &__title {
+        font-size: 0.75rem;
+        line-height: calc(16 / 12);
+        font-weight: 800;
+
+        @media (min-width: 768px) {
+            font-size: 1rem;
+            font-weight: 800;
+            line-height: 1.375;
+        }
+    }
+
+    &__title--processing {
+        color: var(--status-processing-color);
+    }
+
+    &__title--active {
+        color: var(--status-active-color);
+    }
+
+    &__title--performed {
+        color: var(--status-prefomed-color);
+    }
+
+    &__subtitle {
+        font-size: 0.625rem;
+        font-weight: 400;
+        opacity: 0.5;
+
+        @media (min-width: 768px) {
+            font-size: 0.875rem;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.payment-options {
+    margin-top: 1.5rem;
+
+    &__category {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.25rem;
+        row-gap: 1rem;
+
+        @media (min-width: 768px) {
+            gap: 1.125rem;
+        }
+    }
+
+    &__tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--grey-color);
+        box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05),
+            -5px 0px 5px 0px rgba(0, 0, 0, 0.03);
+        border-radius: 0.25rem;
+        padding: 1rem 0.5rem 0.5rem;
+        color: inherit;
+        flex-shrink: 0;
+        width: calc(50% - 0.625rem);
+        min-height: 5rem;
+        position: relative;
+        transition: background-color 250ms ease-in-out;
+
+        @media (min-width: 768px) {
+            border-radius: 0.375rem;
+            width: 10.75rem;
+            min-height: auto;
+            padding: 1.25rem 1.25rem 0.75rem;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: var(--background-color);
+        }
+
+        img {
+            display: block;
+            height: auto;
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+            margin-bottom: 0.125rem;
+        }
+    }
+
+    &__tile-tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.5rem;
+        color: var(--white-color);
+        text-transform: uppercase;
+        min-height: 1rem;
+        min-width: 4.75rem;
+        padding-inline: 1rem;
+        border-radius: 0.125rem;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+
+    &__tile-tag--popular {
+        background-color: var(--blue-color);
+    }
+
+    &__tile-tag--trusted {
+        background-color: var(--orange-color);
+    }
+
+    &__tile-name {
+        font-size: 0.625rem;
+        font-weight: 800;
+        line-height: 1.4;
+        margin-top: auto;
+
+        @media (min-width: 768px) {
+            font-size: 0.875rem;
+            line-height: calc(19 / 14);
+            margin-bottom: 0.375rem;
+        }
+    }
+
+    &__tile-comission {
+        font-size: 0.5rem;
+        font-weight: 400;
+        line-height: 1.25;
+        opacity: 0.5;
+
+        @media (min-width: 768px) {
+            font-size: 0.75rem;
+            line-height: calc(16 / 12);
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.transactions {
+    &__wrapper {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            height: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--blue-color);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--grey-color);
+        }
+    }
+
+    &__filter {
+        color: var(--white-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 0.25rem;
+        background-color: var(--grey-color);
+        transition: background-color 250ms ease-in-out;
+
+        @media (min-width: 768px) {
+            height: 2.625rem;
+            width: 2.625rem;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: var(--background-color);
+        }
+
+        svg {
+            width: 0.75rem;
+
+            @media (min-width: 768px) {
+                width: auto;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        min-width: 600px;
+    }
+
+    &__listitem {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 1.125rem;
+        border-bottom: 1px solid #1c1a1a;
+        column-gap: 1rem;
+
+        @media (min-width: 768px) {
+            column-gap: 0;
+        }
+    }
+
+    &__more {
+        text-align: center;
+        margin-top: 2rem;
+
+        .button {
+            min-width: 17.5rem;
+        }
+    }
+}

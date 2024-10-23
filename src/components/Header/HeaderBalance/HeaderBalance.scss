@@ -1,0 +1,46 @@
+.header-balance {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-light-color);
+    border-radius: 0.25rem;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        column-gap: 0.4375rem;
+        flex-shrink: 0;
+        padding: 0.5rem 0.375rem 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 800;
+        line-height: 1.35;
+
+        span {
+            font-size: 0.5rem;
+            line-height: 1.25;
+            font-weight: 900;
+            display: block;
+            background-color: var(--blue-color);
+            border-radius: 0.1875rem;
+            padding: 0.1875rem 0.125rem;
+        }
+    }
+
+    &__button {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-grow: 1;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: var(--blue-color);
+        color: inherit;
+        transition: background-color 250ms ease-in-out;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+
+        &:hover,
+        &:focus {
+            background-color: var(--blue-light-color);
+        }
+    }
+}

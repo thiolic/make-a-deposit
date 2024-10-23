@@ -1,0 +1,29 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: calc(19 / 14);
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+    padding: 0.65rem 1.625rem;
+    min-width: 9.5rem;
+
+    @media (min-width: 768px) {
+        font-size: 1rem;
+        line-height: 1.375;
+        padding-block: 0.625rem;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--blue-color);
+    }
+
+    &--default {
+        background-color: var(--orange-color);
+    }
+}
