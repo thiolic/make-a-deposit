@@ -16,7 +16,7 @@ export const CustomSelect = memo(({ options, defaultSelectedOption }) => {
         setSelectedOption(option);
         setDropdownOpen(false);
     }, []);
-
+    
     return (
         <div className="custom-select">
             <div className="custom-select__selected" onClick={toggleDropdown}>
@@ -64,10 +64,10 @@ export const CustomSelect = memo(({ options, defaultSelectedOption }) => {
                             </span>
                             <div>
                                 <p className="custom-select__option-title">
-                                    {selectedOption?.mainText}
+                                    {option?.mainText}
                                 </p>
                                 <span className="custom-select__option-subtitle">
-                                    {selectedOption?.secondaryText}
+                                    {option?.secondaryText}
                                 </span>
                             </div>
                         </li>
